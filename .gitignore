@@ -4,6 +4,7 @@ language-predictor-backend/__pycache__/
 
 # Ignore future frontend junk (like React's node_modules)
 language-predictor-frontend/node_modules/
+language-predictor-frontend/dist/
 
 # Ignore environment secrets
 .env

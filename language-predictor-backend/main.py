@@ -1,7 +1,21 @@
+
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware # <--- Add this
 from pydantic import BaseModel
 
 app = FastAPI()
+
+# --- ADD THIS BLOCK ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # In production, replace "*" with your actual frontend URL
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+# ----------------------
+
+
+
 
 # This is a "Schema". It defines what the input should look like.
 # We expect a JSON object with a key called "text"
