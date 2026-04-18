@@ -1,0 +1,9 @@
+# Ignore the Python playground in the backend folder
+language-predictor-backend/venv/
+language-predictor-backend/__pycache__/
+
+# Ignore future frontend junk (like React's node_modules)
+language-predictor-frontend/node_modules/
+
+# Ignore environment secrets
+.env
