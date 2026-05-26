@@ -56,8 +56,8 @@ export default function Home() {
             onClick={handlePredict}
             disabled={loading}
             className={`w-full mt-6 py-4 rounded-xl font-bold text-lg transition-all transform active:scale-[0.98] ${
-              loading 
-                ? "bg-slate-700 cursor-not-allowed" 
+              loading
+                ? "bg-slate-700 cursor-not-allowed"
                 : "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
             }`}
           >
@@ -67,7 +67,7 @@ export default function Home() {
 
         {/* Result Section */}
         {result && (
-          <div className="mt-8 p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="mt-8 p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
             <div className="flex flex-col items-center">
               <span className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-1">
                 Detected Language
@@ -75,6 +75,10 @@ export default function Home() {
               <h2 className="text-4xl font-black text-emerald-400">
                 {result}
               </h2>
+              {/* ADD THIS LINE */}
+              <p className="mt-2 text-slate-400">
+                Confidence: {result.confidence}
+              </p>
             </div>
           </div>
         )}
